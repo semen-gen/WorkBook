@@ -2,7 +2,7 @@ package task6;
 
 public class Main6 {
     public static void main(String[] args) {
-        nextDay(31, 12, 2020);
+        nextDay(30, 4, 2020);
     }
 
     /**
@@ -26,7 +26,8 @@ public class Main6 {
     public static void nextDay(int d, int m, int y) {
         if (((m == 1 || m == 3 || m == 5 || m == 7 || m == 8 || m == 10) && d == 31) ||
                 ((m == 4 || m == 6 || m == 9 || m == 11) && d == 30) ||
-                (m == 2 && d == 29)) {
+                (m == 2 && d == 29) ||
+                (!(y % 400 == 0 || (y % 100 != 0 && y % 4 == 0)) && m == 2 && d == 28)) {
             d = 1;
             m++;
         }
@@ -34,10 +35,6 @@ public class Main6 {
             d = 1;
             m = 1;
             y++;
-        }
-        else if (!(y % 400 == 0 || (y % 100 != 0 && y % 4 == 0)) && m == 2 && d == 28) {
-            d = 1;
-            m++;
         }
         else {
             d++;
