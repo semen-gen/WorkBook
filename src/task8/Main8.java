@@ -2,12 +2,15 @@ package task8;
 
 public class Main8 {
     public static void main(String[] args) {
-        long sum = 1;
-        long i = 2;
-        while (i <= 20) {
-            sum *= i;
+        factorial(20);
+    }
+
+    public static void factorial(long to) {
+        long f = 1, i = 1;
+        while (i <= to) {
+            f *= i;
             i++;
         }
-        System.out.println(sum);
+        System.out.println(f);
     }
 }
