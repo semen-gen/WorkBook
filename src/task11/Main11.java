@@ -13,7 +13,7 @@ public class Main11 {
             for (int i = 2; i <= Math.sqrt(x); i++) {
                 if (!(x == 1 || x == 2) && x != i && x % i == 0) {
                     simpleInt = false;
-                    break;
+                    i = (int) Math.sqrt(x);  // используется вместо break
                 }
             }
         }
